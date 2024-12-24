@@ -11,17 +11,16 @@
         },
         {
             "src": "/assets/(.*)",
-            "dest": "/assets/$1"
+            "dest": "/assets/"
         },
         {
             "src": "/js/(.*)",
-            "dest": "/js/$1"
+            "dest": "/js/"
         },
         {
             "src": "/storage/(.*)",
-            "dest": "/storage/$1"
+            "dest": "/storage/"
         },
-
         {
             "src": "/vendor/(.*)",
             "dest": "/public/vendors/"
