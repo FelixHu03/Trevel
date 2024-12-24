@@ -1,15 +1,13 @@
 {
     "version": 2,
-    "framework": null,
+      "framework": null,
     "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.6.0"
-        }
+        "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [
         {
             "src": "/build/(.*)",
-            "dest": "/build/$1"
+            "dest": "/public/build/"
         },
         {
             "src": "/assets/(.*)",
@@ -23,9 +21,10 @@
             "src": "/storage/(.*)",
             "dest": "/storage/$1"
         },
+
         {
-            "src": "/favicon.ico",
-            "dest": "/favicon.ico"
+            "src": "/vendor/(.*)",
+            "dest": "/public/vendors/"
         },
         {
             "src": "/(.*)",
@@ -35,15 +34,15 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://mdp-vercel.vercel.app",
-
+        "APP_URL": "https://mdp-vercel.vercel.app/",
+ 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "VIEW_COMPILED_PATH": "/tmp",
-
+ 
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie"
